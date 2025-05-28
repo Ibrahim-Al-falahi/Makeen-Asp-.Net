@@ -11,8 +11,8 @@ namespace Inclass.Configuration
             builder.ToTable("Review");
             builder.HasKey(p => p.Id);
             builder.Property(p => p.Comment).IsRequired(false);
-            builder.Property(p => p.Rating).IsRequired();
-            builder.HasCheckConstraint("range rating", "`Rating` BETWEEN `1` AND `5`");
+            builder.Property(p => p.Rating).IsRequired().HasPrecision(10, 3);
+            //builder.HasCheckConstraint("range rating", "`Rating` BETWEEN `1` AND `5`");
 
             builder.HasOne(p => p.Product)
                .WithMany(r => r.ReviewList)
