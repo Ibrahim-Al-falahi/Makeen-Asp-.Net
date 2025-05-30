@@ -47,7 +47,7 @@ namespace MuscatAirport.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("airlines");
+                    b.ToTable("airlines", (string)null);
                 });
 
             modelBuilder.Entity("MuscatAirport.Models.Airline_Module.Flight", b =>
@@ -79,7 +79,7 @@ namespace MuscatAirport.Migrations
 
                     b.HasIndex("AirlineId");
 
-                    b.ToTable("flights");
+                    b.ToTable("flights", (string)null);
                 });
 
             modelBuilder.Entity("MuscatAirport.Models.Checkpoint_Module.Checkpoint", b =>
@@ -108,7 +108,7 @@ namespace MuscatAirport.Migrations
 
                     b.HasIndex("TerminalId");
 
-                    b.ToTable("checkpoints");
+                    b.ToTable("checkpoints", (string)null);
                 });
 
             modelBuilder.Entity("MuscatAirport.Models.Checkpoint_Module.Officer", b =>
@@ -149,7 +149,7 @@ namespace MuscatAirport.Migrations
 
                     b.HasIndex("CheckpointId");
 
-                    b.ToTable("officers");
+                    b.ToTable("officers", (string)null);
                 });
 
             modelBuilder.Entity("MuscatAirport.Models.Passenger_Module.Baggage", b =>
@@ -173,7 +173,7 @@ namespace MuscatAirport.Migrations
 
                     b.HasIndex("PassengerId");
 
-                    b.ToTable("baggages");
+                    b.ToTable("baggages", (string)null);
                 });
 
             modelBuilder.Entity("MuscatAirport.Models.Passenger_Module.Passenger", b =>
@@ -220,7 +220,7 @@ namespace MuscatAirport.Migrations
 
                     b.HasIndex("FlightId");
 
-                    b.ToTable("passengers");
+                    b.ToTable("passengers", (string)null);
                 });
 
             modelBuilder.Entity("MuscatAirport.Models.Terminal_Module.Gate", b =>
@@ -249,7 +249,7 @@ namespace MuscatAirport.Migrations
 
                     b.HasIndex("TerminalId");
 
-                    b.ToTable("gates");
+                    b.ToTable("gates", (string)null);
                 });
 
             modelBuilder.Entity("MuscatAirport.Models.Terminal_Module.Terminal", b =>
@@ -273,7 +273,7 @@ namespace MuscatAirport.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("terminals");
+                    b.ToTable("terminals", (string)null);
                 });
 
             modelBuilder.Entity("MuscatAirport.Models.Airline_Module.Flight", b =>

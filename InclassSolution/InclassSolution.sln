@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inclass", "Inclass\Inclass.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuscatAirport", "MuscatAirport\MuscatAirport.csproj", "{9EDEEE7B-7A68-4858-BB8B-5B75CC68AF10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList", "TodoList\TodoList.csproj", "{CEE82261-C133-4901-A6B7-093E2CAA9424}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9EDEEE7B-7A68-4858-BB8B-5B75CC68AF10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EDEEE7B-7A68-4858-BB8B-5B75CC68AF10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EDEEE7B-7A68-4858-BB8B-5B75CC68AF10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEE82261-C133-4901-A6B7-093E2CAA9424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEE82261-C133-4901-A6B7-093E2CAA9424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEE82261-C133-4901-A6B7-093E2CAA9424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEE82261-C133-4901-A6B7-093E2CAA9424}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
