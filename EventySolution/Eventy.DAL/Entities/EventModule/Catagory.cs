@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Eventy.DAL.Models
+namespace Eventy.DAL.Entities.EventModule
 {
     public class Catagory
     {
-        public int Ìd { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
 
-        public IEnumerable<EventyEvent> EventList { get; set; } = new HashSet<EventyEvent>();
+        public virtual IEnumerable<EventyEvent> EventList { get; set; } = new HashSet<EventyEvent>();
 
     }
 }

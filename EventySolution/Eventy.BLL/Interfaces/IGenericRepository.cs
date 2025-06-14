@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Eventy.BLL.Interfaces
 {
-    public interface IGenericRepository<T>
+    public interface IGenericRepository<T> where T : class
     {
         IEnumerable<T> GetAll();
         T GetById(int id);
