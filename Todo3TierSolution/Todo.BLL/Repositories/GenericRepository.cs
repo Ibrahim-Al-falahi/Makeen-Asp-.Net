@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Todo.BLL.Interfaces;
 using Todo.DAL.Context;
 using Todo.DAL.Entities;
@@ -24,24 +25,41 @@ namespace Todo.BLL.Repositories
             _context.Add(entity);
         }
 
+        public bool CatagoryExists(int id)
+        {
+            return _context.Catagories.Any(e => e.Id == id);
+        }
+
+        public void Delete(T entity)
+        {
+            _context.Remove(entity);
+        }
+
         public void DeleteById(int id)
         {
             _context.Remove(id);
         }
 
-        public IEnumerable<T> GetAll()
+        public async Task<IEnumerable<T>> GetAll()
         {
-            return _context.Set<T>().ToList();
+            return await _context.Set<T>().ToListAsync();
         }
 
-        public T GetById(int id)
+        public async Task<T> GetById(int? id)
         {
-            return _context.Set<T>().Find(id);
+            return await _context.Set<T>().FirstOrDefaultAsync(m => m.Id == id);
+        }
+
+        public async Task<int> SaveChangesAsyncronised()
+        {
+            return await _context.SaveChangesAsync();
         }
 
         public void Update(T entity)
         {
             _context.Update(entity);
         }
+
+        
     }
 }
