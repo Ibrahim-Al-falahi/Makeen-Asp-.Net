@@ -19,8 +19,8 @@ namespace Eventy.PL.WEB
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<ApplicationDbContext>(
                 options => options.UseSqlServer(builder.Configuration.GetConnectionString("Connection"))
-                ).AddEntityFrameworkProxies();
-
+                );
+            //.AddEntityFrameworkProxies()
             builder.Services.AddScoped<IGenericRepository<Catagory>,GenericRepository<Catagory>>();
             builder.Services.AddScoped<IGenericRepository<Commitee>, GenericRepository<Commitee>>();
             builder.Services.AddScoped<IGenericRepository<EventyEvent>, GenericRepository<EventyEvent>>();
