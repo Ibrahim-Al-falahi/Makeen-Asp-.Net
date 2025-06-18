@@ -27,7 +27,7 @@ namespace Todo.PL.Web.Controllers
         }
 
         // GET: Catagories/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
             if (id == null)
             {
@@ -66,7 +66,7 @@ namespace Todo.PL.Web.Controllers
         }
 
         // GET: Catagories/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int id)
         {
             if (id == null)
             {
@@ -102,7 +102,7 @@ namespace Todo.PL.Web.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CatagoryExists(catagory.Id))
+                    if (!await _context.CatagoryExists(catagory.Id))
                     {
                         return NotFound();
                     }
@@ -117,7 +117,7 @@ namespace Todo.PL.Web.Controllers
         }
 
         // GET: Catagories/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int id)
         {
             if (id == null)
             {
@@ -148,9 +148,9 @@ namespace Todo.PL.Web.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool CatagoryExists(int id)
-        {
-            return _context.CatagoryExists(id);
-        }
+        //private bool CatagoryExists(int id)
+        //{
+        //    return _context.CatagoryExists(id);
+        //}
     }
 }

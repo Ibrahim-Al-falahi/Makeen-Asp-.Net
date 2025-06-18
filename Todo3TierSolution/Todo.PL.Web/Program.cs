@@ -19,7 +19,8 @@ namespace Todo.PL.Web
                 option => option.UseSqlServer(builder.Configuration.GetConnectionString("Connection"))
                 );
             builder.Services.AddScoped<IGenericRepository<Catagory>, GenericRepository<Catagory>>();
-            builder.Services.AddScoped<IGenericRepository<TodoList>, GenericRepository<TodoList>>();
+            //builder.Services.AddScoped<IGenericRepository<TodoList>, GenericRepository<TodoList>>();
+            builder.Services.AddScoped<ITodoListRepository, TodoListRepository>();
 
             builder.Services.AddIdentity<IdentityUser, IdentityRole>(
                 option =>

@@ -25,9 +25,9 @@ namespace Todo.BLL.Repositories
             _context.Add(entity);
         }
 
-        public bool CatagoryExists(int id)
+        public async Task<bool> CatagoryExists(int id)
         {
-            return _context.Catagories.Any(e => e.Id == id);
+            return await _context.Catagories.AnyAsync(e => e.Id == id);
         }
 
         public void Delete(T entity)
@@ -45,7 +45,7 @@ namespace Todo.BLL.Repositories
             return await _context.Set<T>().ToListAsync();
         }
 
-        public async Task<T> GetById(int? id)
+        public async Task<T> GetById(int id)
         {
             return await _context.Set<T>().FirstOrDefaultAsync(m => m.Id == id);
         }
